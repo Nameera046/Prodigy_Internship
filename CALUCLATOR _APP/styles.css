@@ -1,0 +1,313 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f8f0ff;
+}
+
+.navbar {
+    background-color: #8B7355;
+    padding: 25px 30px;  /* Increased padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;  /* Added fixed height */
+}
+
+.logo {
+    color: white;
+    font-size: 24px;  /* Increased font size */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;  /* Increased gap between nav items */
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;  /* Increased padding to make boxes bigger */
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 18px;  /* Increased font size */
+    transition: background-color 0.3s;
+}
+
+.nav-link.active {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.content-section {
+    display: none;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.content-section.active {
+    display: block;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-link.active {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.calculator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.calculator {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 400px;  /* Increased width */
+    margin: 0 auto;
+}
+
+.calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;  /* Slightly increased gap */
+}
+
+.calculator-buttons button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-height: 50px;  /* Ensure consistent height */
+}
+
+#display {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: right;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.calculator-buttons .double {
+    grid-column: span 2;
+    aspect-ratio: 2/1;
+}
+
+.calculator-buttons .equals {
+    background-color: #007bff;
+    color: white;
+}
+
+.history-container {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.history-container h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#calcHistory {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#calcHistory div {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.clear-btn {
+    background-color: #b19cd9;  /* Changed to a more visible light violet */
+    color: white;  /* Changed text color to white for better contrast */
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.clear-btn:hover {
+    background-color: #7e61bb;  /* Slightly darker violet on hover */
+}
+
+.business-tracker {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.input-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.input-group select,
+.input-group input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    flex: 1;
+}
+
+#addTransaction {
+    background-color: #8B7355;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.transaction-list {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.transaction-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.transaction-summary div {
+    text-align: center;
+}
+
+#transactionHistory {
+    margin-top: 20px;
+}
+
+.transaction {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+}
+
+.transaction.deposit {
+    color: #28a745;
+}
+
+.transaction.withdraw {
+    color: #dc3545;
+}
+
+.profit-calculator {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.profit-calculator .input-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.profit-calculator select,
+.profit-calculator input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    flex: 1;
+}
+
+#calculateProfit {
+    background-color: #8B7355;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.monthly-summary {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.summary-header {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#monthlyProfits {
+    margin-top: 20px;
+}
+
+.profit-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+}
+
+.yearly-total {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+.yearly-total h4 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+#yearlyTotals {
+    display: grid;
+    gap: 15px;
+    font-size: 18px;
+}

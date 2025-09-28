@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><h1>Calculator - HN Business Suite</h1></title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <span class="hn-logo"><h1>HN</h1></span>
+            <h1>Calculator</h1>
+        </div>
+        <div class="nav-links">
+            <a href="#calculator" class="nav-link active">Calculator</a>
+            <a href="#history" class="nav-link">History</a>
+            <a href="#business" class="nav-link">Business Tracker</a>
+            <a href="#profit" class="nav-link">Profit Calculator</a>
+        </div>
+    </nav>
+
+    <!-- Add new history section -->
+    <div class="content-section" id="history">
+        <div class="history-container">
+            <h2>Calculation History</h2>
+            <div id="calcHistory"></div>
+            <button id="clearHistory" class="clear-btn">Clear History</button>
+        </div>
+    </div>
+
+    <!-- Remove history panel from calculator section -->
+    <div class="content-section active" id="calculator">
+        <div class="calculator-container">
+            <div class="calculator">
+                <div class="theme-toggle">
+                    <button id="themeSwitch">🌙</button>
+                </div>
+                <input type="text" id="display" readonly>
+                <div class="calculator-buttons">
+                    <button class="special">C</button>
+                    <button class="special">←</button>
+                    <button class="special">%</button>
+                    <button class="operator">/</button>
+                    
+                    <!-- Add Trigonometric Functions -->
+                    <button class="trig">sin</button>
+                    <button class="trig">cos</button>
+                    <button class="trig">tan</button>
+                    <button class="operator">^</button>
+                    
+                    <button>7</button>
+                    <button>8</button>
+                    <button>9</button>
+                    <button class="operator">*</button>
+                    
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button class="operator">-</button>
+                    
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button class="operator">+</button>
+                    
+                    <button class="double">0</button>
+                    <button>.</button>
+                    <button class="equals">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section" id="business">
+        <div class="business-tracker">
+            <div class="input-group">
+                <select id="transactionType">
+                    <option value="deposit">Deposit</option>
+                    <option value="withdraw">Withdraw</option>
+                </select>
+                <input type="number" id="transactionAmount" placeholder="Transaction Amount">
+                <input type="text" id="transactionDesc" placeholder="Description">
+                <button id="addTransaction">Add Transaction</button>
+            </div>
+            <div class="transaction-list">
+                <h3>Transaction History</h3>
+                <div class="transaction-summary">
+                    <div>Total Deposits: <span id="totalDeposits">$0.00</span></div>
+                    <div>Total Withdrawals: <span id="totalWithdraws">$0.00</span></div>
+                    <div>Balance: <span id="balance">$0.00</span></div>
+                </div>
+                <div id="transactionHistory"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section" id="profit">
+        <div class="profit-calculator">
+            <div class="input-group">
+                <select id="monthSelect">
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+                <input type="number" id="revenue" placeholder="Monthly Revenue">
+                <input type="number" id="expenses" placeholder="Monthly Expenses">
+                <button id="calculateProfit">Calculate Profit</button>
+            </div>
+            <div id="profitResult" class="profit-result"></div>
+            <div class="monthly-summary">
+                <h3>Monthly Profit Summary</h3>
+                <div class="summary-header">
+                    <div>Month</div>
+                    <div>Revenue</div>
+                    <div>Expenses</div>
+                    <div>Profit</div>
+                </div>
+                <div id="monthlyProfits"></div>
+                <div class="yearly-total">
+                    <h4>Yearly Summary</h4>
+                    <div id="yearlyTotals">
+                        <div>Total Revenue: <span id="totalRevenue">$0.00</span></div>
+                        <div>Total Expenses: <span id="totalExpenses">$0.00</span></div>
+                        <div>Net Profit: <span id="netProfit">$0.00</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
